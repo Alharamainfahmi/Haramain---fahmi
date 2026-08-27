@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ps" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الحرمین فهمي سیاحتي او زیارتي شرکت</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f8f6;
+      color: #222;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #0d5c45;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 14px;
+    }
+
+    nav {
+      background: white;
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      color: #0d5c45;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+      url("https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1200&q=80");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #d4af37;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .services {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .services h2 {
+      text-align: center;
+      color: #0d5c45;
+      margin-bottom: 25px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px 18px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,.08);
+    }
+
+    .card .icon {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #0d5c45;
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      background: #0d5c45;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .contact h2 {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #083c2e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>الحرمین فهمي</h1>
+    <p>سیاحتي او زیارتي شرکت</p>
+  </header>
+
+  <nav>
+    <a href="#home">کور</a>
+    <a href="#services">خدمتونه</a>
+    <a href="#contact">اړیکه</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>ستاسو د سفر باوري ملګری</h2>
+    <p>ټکټونه، حج او عمره، مقدس زیارتونه او خارجی حوالې</p>
+    <a class="button" href="#services">زموږ خدمتونه</a>
+  </section>
+
+  <section class="services" id="services">
+    <h2>زموږ خدمتونه</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">✈️</div>
+        <h3>د الوتنې ټکټونه</h3>
+        <p>د کورنیو او نړیوالو سفرونو لپاره د الوتنې ټکټونه.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🕋</div>
+        <h3>حج او عمره</h3>
+        <p>د حج او عمرې لپاره د سفر او اړوندو خدماتو تنظیم.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🕌</div>
+        <h3>مقدس زیارتونه</h3>
+        <p>د مقدسو ځایونو او زیارتونو لپاره د سفر خدمتونه.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💱</div>
+        <h3>خارجی حوالې</h3>
+        <p>د خارجی حوالو او پیسو لېږد لپاره خدمات.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>له موږ سره اړیکه</h2>
+    <p>د سفر، حج، عمرې او نورو خدماتو لپاره له موږ سره اړیکه ونیسئ.</p>
+    <br>
+    <a class="button" href="tel:+93700000000">📞 تماس ونیسئ</a>
+  </section>
+
+  <footer>
+    © 2026 الحرمین فهمي سیاحتي او زیارتي شرکت
+  </footer>
+
+</body>
+</html>
