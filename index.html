@@ -1,203 +1,967 @@
 <!DOCTYPE html>
 <html lang="ps" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الحرمین فهمي سیاحتي او زیارتي شرکت</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>الحرمين فهمي | سیاحتي او زیارتي شرکت</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7f8f6;
-      color: #222;
-      line-height: 1.8;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-    header {
-      background: #0d5c45;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    header h1 {
-      font-size: 25px;
-      margin-bottom: 5px;
-    }
+body{
+  font-family:Arial,Tahoma,sans-serif;
+  background:#f7f8f6;
+  color:#222;
+  line-height:1.8;
+}
 
-    header p {
-      font-size: 14px;
-    }
+header{
+  background:#075c45;
+  color:white;
+  text-align:center;
+  padding:28px 15px;
+}
 
-    nav {
-      background: white;
-      padding: 12px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
+header h1{
+  font-size:30px;
+  margin-bottom:5px;
+}
 
-    nav a {
-      color: #0d5c45;
-      text-decoration: none;
-      margin: 0 8px;
-      font-weight: bold;
-      font-size: 14px;
-    }
+header p{
+  font-size:16px;
+}
 
-    .hero {
-      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-      url("https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1200&q=80");
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
+.language{
+  margin-top:15px;
+}
 
-    .hero h2 {
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
+.language button{
+  border:0;
+  background:white;
+  color:#075c45;
+  padding:7px 13px;
+  margin:3px;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:bold;
+}
 
-    .hero p {
-      font-size: 17px;
-      margin-bottom: 25px;
-    }
+nav{
+  background:white;
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  flex-wrap:wrap;
+  padding:12px;
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
 
-    .button {
-      display: inline-block;
-      background: #d4af37;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+nav a{
+  text-decoration:none;
+  color:#075c45;
+  font-weight:bold;
+  padding:8px 13px;
+}
 
-    .services {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+.hero{
+  min-height:500px;
+  background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1600&q=85")
+    center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:40px 20px;
+}
 
-    .services h2 {
-      text-align: center;
-      color: #0d5c45;
-      margin-bottom: 25px;
-    }
+.hero h2{
+  font-size:42px;
+  margin-bottom:15px;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
+.hero p{
+  font-size:20px;
+  max-width:750px;
+  margin:auto;
+}
 
-    .card {
-      background: white;
-      padding: 25px 18px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,.08);
-    }
+.button{
+  display:inline-block;
+  margin-top:22px;
+  background:#d9ae2b;
+  color:white;
+  text-decoration:none;
+  padding:13px 25px;
+  border-radius:10px;
+  font-weight:bold;
+  font-size:17px;
+}
 
-    .card .icon {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
+section{
+  padding:55px 18px;
+  max-width:1150px;
+  margin:auto;
+}
 
-    .card h3 {
-      color: #0d5c45;
-      margin-bottom: 8px;
-    }
+.section-title{
+  text-align:center;
+  color:#075c45;
+  font-size:32px;
+  margin-bottom:30px;
+}
 
-    .contact {
-      background: #0d5c45;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
+.intro{
+  text-align:center;
+  max-width:850px;
+  margin:0 auto 30px;
+}
 
-    .contact h2 {
-      margin-bottom: 15px;
-    }
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
 
-    footer {
-      background: #083c2e;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 13px;
-    }
-  </style>
+.card{
+  background:white;
+  border-radius:16px;
+  padding:25px;
+  box-shadow:0 4px 18px rgba(0,0,0,.08);
+  text-align:center;
+}
+
+.card h3{
+  color:#075c45;
+  margin:10px 0;
+}
+
+.icon{
+  font-size:45px;
+}
+
+.airlines{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin:25px 0;
+}
+
+.airlines span{
+  background:#075c45;
+  color:white;
+  padding:9px 14px;
+  border-radius:25px;
+}
+
+.package{
+  border-top:5px solid #d9ae2b;
+}
+
+.package h3{
+  font-size:23px;
+}
+
+.route{
+  background:#f1f5f2;
+  border-radius:10px;
+  padding:12px;
+  margin:8px 0;
+  font-weight:bold;
+}
+
+.route span{
+  color:#075c45;
+}
+
+.sites{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.site{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 4px 16px rgba(0,0,0,.08);
+}
+
+.site img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+}
+
+.site-content{
+  padding:18px;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+}
+
+.gallery img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border-radius:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,.12);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+}
+
+.contact{
+  background:white;
+  padding:22px;
+  border-radius:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.contact h3{
+  color:#075c45;
+}
+
+.contact a{
+  color:#075c45;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.whatsapp{
+  background:#25D366;
+  color:white !important;
+  display:inline-block;
+  padding:9px 15px;
+  border-radius:8px;
+  margin-top:10px;
+}
+
+footer{
+  background:#075c45;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+}
+
+[dir="ltr"]{
+  direction:ltr;
+}
+
+[dir="ltr"] nav,
+[dir="ltr"] .hero,
+[dir="ltr"] section{
+  text-align:left;
+}
+
+@media(max-width:600px){
+  header h1{
+    font-size:25px;
+  }
+
+  .hero{
+    min-height:450px;
+  }
+
+  .hero h2{
+    font-size:30px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .section-title{
+    font-size:27px;
+  }
+
+  nav a{
+    font-size:14px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>الحرمین فهمي</h1>
-    <p>سیاحتي او زیارتي شرکت</p>
-  </header>
+<header>
+  <h1 id="companyName">الحرمين فهمي</h1>
+  <p id="companySub">سیاحتي او زیارتي شرکت</p>
 
-  <nav>
-    <a href="#home">کور</a>
-    <a href="#services">خدمتونه</a>
-    <a href="#contact">اړیکه</a>
-  </nav>
+  <div class="language">
+    <button onclick="setLanguage('ps')">پښتو</button>
+    <button onclick="setLanguage('fa')">دري</button>
+    <button onclick="setLanguage('en')">English</button>
+  </div>
+</header>
 
-  <section class="hero" id="home">
-    <h2>ستاسو د سفر باوري ملګری</h2>
-    <p>ټکټونه، حج او عمره، مقدس زیارتونه او خارجی حوالې</p>
-    <a class="button" href="#services">زموږ خدمتونه</a>
-  </section>
+<nav>
+  <a href="#home" id="navHome">کور</a>
+  <a href="#services" id="navServices">خدمتونه</a>
+  <a href="#about" id="navAbout">زموږ په اړه</a>
+  <a href="#contact" id="navContact">تماس</a>
+</nav>
 
-  <section class="services" id="services">
-    <h2>زموږ خدمتونه</h2>
+<div class="hero" id="home">
+  <div>
+    <h2 id="heroTitle">ستاسې د سفر باوري ملګری</h2>
+    <p id="heroText">
+      ټکټونه، حج او عمره، مقدس زیارتونه او خارجی حوالې
+    </p>
+    <a class="button" href="#services" id="heroButton">
+      خدمتونه وګورئ
+    </a>
+  </div>
+</div>
 
-    <div class="cards">
+<section id="services">
+  <h2 class="section-title" id="servicesTitle">زموږ خدمتونه</h2>
 
-      <div class="card">
-        <div class="icon">✈️</div>
-        <h3>د الوتنې ټکټونه</h3>
-        <p>د کورنیو او نړیوالو سفرونو لپاره د الوتنې ټکټونه.</p>
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">✈️</div>
+      <h3 id="ticketTitle">ټکټونه</h3>
+      <p id="ticketText">
+        داخلي او نړیوال ټکټونه د نړۍ هر ښار ته.
+      </p>
+      <a class="button" href="#tickets">معلومات وګورئ</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🕋</div>
+      <h3 id="umrahTitle">حج او عمره</h3>
+      <p id="umrahText">
+        ۱۵، ۲۱ او ۲۸ ورځني پکېجونه او اړوند خدمات.
+      </p>
+      <a class="button" href="#umrah">پکېجونه وګورئ</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">💸</div>
+      <h3 id="hawalaTitle">خارجی حوالې</h3>
+      <p id="hawalaText">
+        Western Union او MoneyGram.
+      </p>
+      <a class="button" href="#hawala">معلومات وګورئ</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="tickets">
+
+  <h2 class="section-title">✈️ ټکټونه</h2>
+
+  <p class="intro">
+    داخلي او نړیوال ټکټونه، د افغانستان او د نړۍ هر ښار ته د سفر لپاره.
+    د خپل سفر معلومات ترلاسه کړئ او بیا د ریزرفیشن لپاره زموږ سره اړیکه ونیسئ.
+  </p>
+
+  <div class="airlines">
+    <span>کام ایر</span>
+    <span>آریانا</span>
+    <span>Flydubai</span>
+    <span>Emirates</span>
+    <span>Turkish Airlines</span>
+    <span>Qatar Airways</span>
+    <span>Mahan Air</span>
+  </div>
+
+  <div class="card">
+
+    <div class="icon">✈️</div>
+
+    <h3>د ټکټ مسئول</h3>
+
+    <p>0780026026</p>
+
+    <a class="whatsapp"
+       href="https://wa.me/93780026026"
+       target="_blank">
+       WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+<section id="umrah">
+
+  <h2 class="section-title">🕋 حج او عمره</h2>
+
+  <p class="intro">
+    زموږ د عمرې پکېجونه د هوټل، ترانسپورټ، سفر مسیرونو او مقدسو
+    زیارتونو اړوند خدمات په منظم ډول وړاندې کوي.
+  </p>
+
+  <div class="cards">
+
+    <div class="card package">
+      <div class="icon">🕋</div>
+      <h3>۱۵ ورځنی پکېج</h3>
+      <p>
+        د ۱۵ ورځني عمرې سفر لپاره اړوند خدمات، استوګنه،
+        ترانسپورټ او زیارتونه.
+      </p>
+      <a class="button" href="#routes">خدمات وګورئ</a>
+    </div>
+
+    <div class="card package">
+      <div class="icon">🕋</div>
+      <h3>۲۱ ورځنی پکېج</h3>
+      <p>
+        د ۲۱ ورځني عمرې سفر لپاره اړوند خدمات، استوګنه،
+        ترانسپورټ او زیارتونه.
+      </p>
+      <a class="button" href="#routes">خدمات وګورئ</a>
+    </div>
+
+    <div class="card package">
+      <div class="icon">🕋</div>
+      <h3>۲۸ ورځنی پکېج</h3>
+      <p>
+        د ۲۸ ورځني عمرې سفر لپاره اړوند خدمات، استوګنه،
+        ترانسپورټ او زیارتونه.
+      </p>
+      <a class="button" href="#routes">خدمات وګورئ</a>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">🏨</div>
+      <h3>د مکې هوټل</h3>
+      <p>
+        د مکې مکرمه د استوګنې اړوند خدمات.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏨</div>
+      <h3>د مدینې هوټل</h3>
+      <p>
+        د مدینې منورې د استوګنې اړوند خدمات.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🚌</div>
+      <h3>ترانسپورټ</h3>
+      <p>
+        د عمرې د سفر لپاره د ترانسپورټ اړوند خدمات.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="routes">
+
+  <h2 class="section-title">🚌 د عمرې د سفر مسیر</h2>
+
+  <div class="cards">
+
+    <div class="card">
+
+      <div class="route">
+        ✈️ <span>کابل</span> → <span>جده</span>
       </div>
 
-      <div class="card">
-        <div class="icon">🕋</div>
-        <h3>حج او عمره</h3>
-        <p>د حج او عمرې لپاره د سفر او اړوندو خدماتو تنظیم.</p>
+      <div class="route">
+        🚌 <span>جده</span> → <span>مکه</span>
       </div>
 
-      <div class="card">
-        <div class="icon">🕌</div>
-        <h3>مقدس زیارتونه</h3>
-        <p>د مقدسو ځایونو او زیارتونو لپاره د سفر خدمتونه.</p>
+      <div class="route">
+        🚌 <span>مکه</span> → <span>مدینه</span>
       </div>
 
-      <div class="card">
-        <div class="icon">💱</div>
-        <h3>خارجی حوالې</h3>
-        <p>د خارجی حوالو او پیسو لېږد لپاره خدمات.</p>
+      <div class="route">
+        🚌 <span>مدینه</span> → <span>مکه</span>
+      </div>
+
+      <div class="route">
+        🚌 <span>مکه</span> → <span>جده</span>
       </div>
 
     </div>
-  </section>
 
-  <section class="contact" id="contact">
-    <h2>له موږ سره اړیکه</h2>
-    <p>د سفر، حج، عمرې او نورو خدماتو لپاره له موږ سره اړیکه ونیسئ.</p>
-    <br>
-    <a class="button" href="tel:+93700000000">📞 تماس ونیسئ</a>
-  </section>
+  </div>
 
-  <footer>
-    © 2026 الحرمین فهمي سیاحتي او زیارتي شرکت
-  </footer>
+  <div class="card" style="margin-top:25px;">
+
+    <div class="icon">📞</div>
+
+    <h3>د حج او عمرې مسئول</h3>
+
+    <p>0786000927</p>
+
+    <a class="whatsapp"
+       href="https://wa.me/93786000927"
+       target="_blank">
+       WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="section-title">
+    🕌 د مکې مکرمه مقدس زیارتونه
+  </h2>
+
+  <div class="sites">
+
+    <div class="site">
+
+      <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=900&q=80">
+
+      <div class="site-content">
+
+        <h3>مسجد الحرام</h3>
+
+        <p>
+          مسجد الحرام د مکې مکرمه تر ټولو ستر او مهم مسجد دی
+          او کعبه شریفه پکې موقعیت لري.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="site">
+
+      <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=900&q=80">
+
+      <div class="site-content">
+
+        <h3>غار حراء</h3>
+
+        <p>
+          غار حراء د جبل النور په غره کې موقعیت لري او د اسلامي
+          تاریخ له مهمو ځایونو څخه دی.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="site">
+
+      <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=900&q=80">
+
+      <div class="site-content">
+
+        <h3>جبل عرفات</h3>
+
+        <p>
+          عرفات د حج له مهمو مناسکو سره تړلی مبارک ځای دی.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2 class="section-title">
+    🕌 د مدینې منورې مقدس زیارتونه
+  </h2>
+
+  <div class="sites">
+
+    <div class="site">
+
+      <img src="https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=900&q=80">
+
+      <div class="site-content">
+
+        <h3>مسجد نبوي ﷺ</h3>
+
+        <p>
+          مسجد نبوي ﷺ په مدینه منوره کې موقعیت لري او د مسلمانانو
+          له تر ټولو مقدسو مسجدونو څخه دی.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="site">
+
+      <img src="https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?auto=format&fit=crop&w=900&q=80">
+
+      <div class="site-content">
+
+        <h3>جبل احد</h3>
+
+        <p>
+          جبل احد د مدینې منورې له مشهورو تاریخي ځایونو څخه دی
+          او د اسلامي تاریخ له مهمو پېښو سره تړاو لري.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="site">
+
+      <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=900&q=80">
+
+      <div class="site-content">
+
+        <h3>مسجد قباء</h3>
+
+        <p>
+          مسجد قباء د مدینې منورې له تاریخي او مبارکو مسجدونو
+          څخه دی.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="hawala">
+
+  <h2 class="section-title">
+    💸 خارجی حوالې
+  </h2>
+
+  <p class="intro">
+    موږ د خارجی حوالو په برخه کې د Western Union او MoneyGram
+    د خدماتو اړوند معلومات وړاندې کوو.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+
+      <div class="icon">💸</div>
+
+      <h3>Western Union</h3>
+
+      <p>
+        د Western Union حوالې خدمتونو لپاره زموږ له مسئول سره اړیکه ونیسئ.
+      </p>
+
+      <a class="button" href="#contact">
+        اړیکه
+      </a>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">💰</div>
+
+      <h3>MoneyGram</h3>
+
+      <p>
+        د MoneyGram حوالې خدمتونو لپاره زموږ له مسئول سره اړیکه ونیسئ.
+      </p>
+
+      <a class="button" href="#contact">
+        اړیکه
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="about">
+
+  <h2 class="section-title">
+    🏢 زموږ په اړه
+  </h2>
+
+  <p class="intro">
+    الحرمين فهمي سیاحتي او زیارتي شرکت د سیاحتي او زیارتي
+    خدماتو په برخه کې خپلو مراجعینو ته د ټکټونو، حج او عمرې،
+    هوټلونو، ترانسپورټ او خارجی حوالو خدمات وړاندې کوي.
+  </p>
+
+  <div class="gallery">
+
+    <img
+      src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
+      alt="د دفتر داخلي برخه">
+
+    <img
+      src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85"
+      alt="د دفتر داخلي برخه">
+
+    <img
+      src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=85"
+      alt="د دفتر برخه">
+
+  </div>
+
+  <p class="intro" style="margin-top:25px;">
+
+    زموږ هدف دا دی چې مراجعینو ته د سفر او زیارت لپاره
+    منظم، واضح او باوري خدمات وړاندې کړو.
+
+  </p>
+
+</section>
+
+<section id="contact">
+
+  <h2 class="section-title">
+    📞 تماس
+  </h2>
+
+  <div class="contact-grid">
+
+    <div class="contact">
+
+      <h3>👤 رئیس دفتر</h3>
+
+      <p>0772252525</p>
+
+      <a class="whatsapp"
+         href="https://wa.me/93772252525"
+         target="_blank">
+         WhatsApp
+      </a>
+
+    </div>
+
+    <div class="contact">
+
+      <h3>✈️ د ټکټ مسئول</h3>
+
+      <p>0780026026</p>
+
+      <a class="whatsapp"
+         href="https://wa.me/93780026026"
+         target="_blank">
+         WhatsApp
+      </a>
+
+    </div>
+
+    <div class="contact">
+
+      <h3>🕋 د حج او عمرې مسئول</h3>
+
+      <p>0786000927</p>
+
+      <a class="whatsapp"
+         href="https://wa.me/93786000927"
+         target="_blank">
+         WhatsApp
+      </a>
+
+    </div>
+
+    <div class="contact">
+
+      <h3>👤 د نماینده‌ګانو مسئول</h3>
+
+      <p>0730722801</p>
+
+      <a class="whatsapp"
+         href="https://wa.me/93730722801"
+         target="_blank">
+         WhatsApp
+      </a>
+
+    </div>
+
+    <div class="contact">
+
+      <h3>💸 د خارجی حوالو مسئول</h3>
+
+      <p>0730722804</p>
+
+      <a class="whatsapp"
+         href="https://wa.me/93730722804"
+         target="_blank">
+         WhatsApp
+      </a>
+
+    </div>
+
+    <div class="contact">
+
+      <h3>📧 Email</h3>
+
+      <p>
+        <a href="mailto:alharamaintravelafg@gmail.com">
+          alharamaintravelafg@gmail.com
+        </a>
+      </p>
+
+    </div>
+
+    <div class="contact">
+
+      <h3>📍 آدرس</h3>
+
+      <p>
+        کابل، جاده میوند
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>
+    © 2026 الحرمين فهمي سیاحتي او زیارتي شرکت
+  </p>
+
+  <p>
+    کابل، جاده میوند
+  </p>
+
+</footer>
+
+<script>
+
+const texts = {
+
+ps:{
+  companyName:"الحرمين فهمي",
+  companySub:"سیاحتي او زیارتي شرکت",
+  navHome:"کور",
+  navServices:"خدمتونه",
+  navAbout:"زموږ په اړه",
+  navContact:"تماس",
+  heroTitle:"ستاسې د سفر باوري ملګری",
+  heroText:"ټکټونه، حج او عمره، مقدس زیارتونه او خارجی حوالې",
+  heroButton:"خدمتونه وګورئ",
+  servicesTitle:"زموږ خدمتونه",
+  ticketTitle:"ټکټونه",
+  ticketText:"داخلي او نړیوال ټکټونه د نړۍ هر ښار ته.",
+  umrahTitle:"حج او عمره",
+  umrahText:"۱۵، ۲۱ او ۲۸ ورځني پکېجونه او اړوند خدمات.",
+  hawalaTitle:"خارجی حوالې",
+  hawalaText:"Western Union او MoneyGram."
+},
+
+fa:{
+  companyName:"الحرمین فهمی",
+  companySub:"شرکت سیاحتی و زیارتی",
+  navHome:"خانه",
+  navServices:"خدمات",
+  navAbout:"درباره ما",
+  navContact:"تماس",
+  heroTitle:"همراه مطمئن سفر شما",
+  heroText:"تکت، حج و عمره، زیارت‌های مقدس و حواله‌های خارجی",
+  heroButton:"مشاهده خدمات",
+  servicesTitle:"خدمات ما",
+  ticketTitle:"تکت",
+  ticketText:"تکت‌های داخلی و خارجی به تمام شهرهای جهان.",
+  umrahTitle:"حج و عمره",
+  umrahText:"پکیج‌های ۱۵، ۲۱ و ۲۸ روزه و خدمات مربوطه.",
+  hawalaTitle:"حواله‌های خارجی",
+  hawalaText:"Western Union و MoneyGram."
+},
+
+en:{
+  companyName:"Alharamain Fahmi",
+  companySub:"Travel & Ziyarat Company",
+  navHome:"Home",
+  navServices:"Services",
+  navAbout:"About Us",
+  navContact:"Contact",
+  heroTitle:"Your Trusted Travel Partner",
+  heroText:"Tickets, Hajj & Umrah, Holy Ziyarat and International Money Transfer",
+  heroButton:"View Services",
+  servicesTitle:"Our Services",
+  ticketTitle:"Tickets",
+  ticketText:"Domestic and international tickets to cities around the world.",
+  umrahTitle:"Hajj & Umrah",
+  umrahText:"15, 21 and 28 day packages with related services.",
+  hawalaTitle:"International Transfers",
+  hawalaText:"Western Union and MoneyGram."
+}
+
+};
+
+function setLanguage(lang){
+
+  const t=texts[lang];
+
+  document.documentElement.lang=lang;
+
+  if(lang==="en"){
+    document.documentElement.dir="ltr";
+  }else{
+    document.documentElement.dir="rtl";
+  }
+
+  document.getElementById("companyName").textContent=t.companyName;
+  document.getElementById("companySub").textContent=t.companySub;
+
+  document.getElementById("navHome").textContent=t.navHome;
+  document.getElementById("navServices").textContent=t.navServices;
+  document.getElementById("navAbout").textContent=t.navAbout;
+  document.getElementById("navContact").textContent=t.navContact;
+
+  document.getElementById("heroTitle").textContent=t.heroTitle;
+  document.getElementById("heroText").textContent=t.heroText;
+  document.getElementById("heroButton").textContent=t.heroButton;
+
+  document.getElementById("servicesTitle").textContent=t.servicesTitle;
+
+  document.getElementById("ticketTitle").textContent=t.ticketTitle;
+  document.getElementById("ticketText").textContent=t.ticketText;
+
+  document.getElementById("umrahTitle").textContent=t.umrahTitle;
+  document.getElementById("umrahText").textContent=t.umrahText;
+
+  document.getElementById("hawalaTitle").textContent=t.hawalaTitle;
+  document.getElementById("hawalaText").textContent=t.hawalaText;
+
+}
+
+setLanguage("ps");
+
+</script>
 
 </body>
 </html>
